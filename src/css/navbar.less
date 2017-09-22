@@ -1,0 +1,47 @@
+@import "mainvars.less";
+.navbar-default {
+  font-family: @fontB;
+  background-color:@white;
+  font-size:14px;
+}
+.navbar-default .navbar-nav > li > a {
+  color:@lightBlack;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color:@orange;
+}
+.btn-navbar-cta button{
+  background-color: @darkBlue;
+  color:@white;
+  border:none;
+  border-radius: 0;
+  // height:30px;
+  margin-left:10px;
+}
+.btn-navbar-cta button{
+  background-color: @darkBlue;
+  border:none;
+  border-radius: 0;
+  // height:30px;
+  margin-left:10px;
+
+  color:@white;
+}
+.btn-navbar-cta button{
+  color:@white;
+  opacity:0.75;
+}
+.btn-navbar-cta:hover button {
+  opacity:0.9;
+  color:@white;
+}
+.btn-navbar-cta:active button{
+ color:@orange;
+}
+
+@media (min-width: 768px)
+{
+    .btn-navbar-cta button{
+        margin-left:auto;
+    }
+}

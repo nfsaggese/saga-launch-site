@@ -1,0 +1,123 @@
+@import "mainvars.less";
+
+.leadform-subtitle {
+  text-align:center;
+  font-size: 24px;
+  font-weight:300;
+  font-family: @fontB;
+  margin-bottom:15px;
+}
+.leadform-title-bg {
+  .brush-text-background;
+  font-size: 27px;
+  width:95%;
+}
+@media (min-width: 768px)
+{
+    .leadform-title-bg {
+        // font-size:30px;
+    }
+}
+@media (min-width: 992px)
+{
+    .leadform-title-bg {
+        font-size:40px;
+    }
+}
+.leadform-formgroup {//center when it gets small, left align on larger devices
+  margin-top:10px;
+  margin-left:auto;
+  margin-right:auto;
+  width:80%;
+}
+@media(min-width: 768px){
+  .leadform-formgroup{
+    margin-top:0;
+    margin-left:0;
+  }
+}
+.leadform-input {
+  width:100%;
+  border:none;
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  border-bottom-color:@greyDivider;
+  font-family:@fontB;
+  font-size:16px;
+  // height:18px;
+  padding: 15px 0px;
+  outline:none;
+}
+
+.leadform-radio {
+  font-family:@fontB;
+  font-size:14px;
+}
+
+.leadform-submit-button {
+  font-family:@fontB;
+  font-size:20px;
+  font-weight:300;
+  width:100%;
+  padding: 10px;
+  display:inline-block;
+  background:#fff;
+  border-style:solid;
+  border-width: 1px;
+  border-color: @black;
+
+}
+// textarea, input, button { outline: none; }
+.leadform-icon {
+  display:block;
+  height:66px;
+  width:66px;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+.leadform-icon-helper {
+  // line-height: 76px;
+  font-family:@fontB;
+  font-size:20px;
+  text-align: center;
+  font-weight: 200;
+}
+
+@media(min-width: 768px){
+  .leadform-icongroup {//center when it gets small, left align on larger devices
+    height:120px;
+  }
+  .leadform-icon-helper {
+    // padding-left:10px;
+    // font-size:20px;
+    height:66px;
+    text-align:left;
+    padding-left:20px;
+  }
+  .leadform-icon-helper-single-line {
+
+    // line-height: 66px;
+  }
+  .leadform-icon-helper p {
+    vertical-align:middle;
+  }
+}
+@media(min-width: 992px){
+  .leadform-icon {
+    height:76px;
+    width:76px;
+  }
+  .leadform-icon-helper {
+    font-size:26px;
+  }
+  .leadform-icon-helper-single-line {
+    line-height: 76px;
+  }
+}
+
+// @media(min-width: 768px){
+//   .leadform-icongroup{
+//     margin-right:0;
+//   }
+// }

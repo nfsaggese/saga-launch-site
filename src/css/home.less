@@ -1,0 +1,400 @@
+@import "mainvars.less";
+.home-hero-vid-style {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  background: url('/img/home/static-poster.jpg') no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+#home-hero-vid-phone {
+  &:extend(.home-hero-vid-style);
+  z-index:-101;
+}
+#home-hero-vid {
+  display:none;
+}
+// @media(min-width:768px){
+//   #home-hero-vid-phone {
+//     display:none;
+//     min-width:0;
+//     min-height:0;
+//     width:0;
+//     height:0;
+//     opacity:0;
+//   }
+//   #home-hero-vid {
+//     &:extend(.home-hero-vid-style);
+//     display:block;
+//   }
+// }
+//
+// #home-hero-vid {
+//   .home-hero-vid-style;
+// }
+.home-hero-vid-wrapper {
+   width: 100%;
+   overflow:hidden;
+   display:block;
+   height: 500px;
+};
+.home-hero-vid-wrapper-outer {
+  .home-hero-vid-wrapper;
+  position:relative;
+}
+.home-hero-vid-wrapper-inner {
+  .home-hero-vid-wrapper;
+  position:absolute;
+}
+.home-vid-overlay {
+  position:absolute;
+  z-index:-99;
+  // background-image: url('/img/home/vid-cross-overlay.png');
+  // background-color:@lightBlack;
+  background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 13%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 13%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 13%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat-x repeat-y;
+  width:100%;
+  height:100%;
+  opacity:0.3;
+}
+.home-hero-vid-middle{
+  .home-hero-vid-wrapper-inner;
+  z-index:-100;
+  // height:498px;
+  // top:2px;
+}
+.home-vid-mask {
+  z-index:-98;
+  position:absolute;
+  background-repeat: repeat-x;
+  background-size:auto 100%;
+  height:50px;
+  width:100%;
+  outline:none;
+  border:0px;
+}
+.home-hero-vid-bottom {
+  .home-vid-mask;
+  bottom:0;
+  background-image: url('/img/home/vid-bottom.png');
+
+}
+.home-hero-vid-top {
+  .home-vid-mask;
+  top:0;
+  background-image: url('/img/home/vid-top.png');
+
+}
+.home-hero-size {
+  width:100%;
+  height:1250px;
+}
+@media(min-width:375px){
+  .home-hero-size{
+    height:1130px;
+  }
+}
+@media(min-width:425px){
+  .home-hero-size{
+    height:1010px;
+  }
+}
+@media (min-width:600px) {
+  .home-hero-size {
+    height:950px;
+  }
+}
+@media (min-width:992px) {
+  .home-hero-size{
+    height:800px;
+  }
+}
+@media (min-width:1200px) {
+  .home-hero-size{
+    height:650px;
+  }
+}
+.home-hero-content {
+  &:extend(.home-hero-size);
+  margin-top:100px;
+  position:absolute;
+  z-index: -50;
+}
+.home-hero-container {
+  &:extend(.home-hero-size);
+  position:relative;
+}
+.home-hero-background {
+  .home-hero-vid-wrapper-inner;
+  &:extend(.home-hero-size);
+}
+.home-hero-content-reset {
+
+}
+.hero-tagline-font {
+  font-weight: 800;
+  color:@white;
+}
+@media (min-width:768px){
+  .hero-tagline-font{
+    font-size: 38px;
+  }
+}
+#home-hero-tagline {
+  &:extend(.brush-text-background);
+  &:extend(.hero-tagline-font);
+  background:none;
+  text-align:center;
+}
+#home-hero-tagline-stroke {
+  &:extend(.brush-text-background);
+  &:extend(.hero-tagline-font);
+  background-image:url('/img/home/gold-stroke.png');
+  width:250px;
+  text-align:center;
+  display:inline-block;
+}
+@media (min-width:768px){
+  #home-hero-tagline-stroke{
+    width:350px;
+  }
+}
+.home-hero-card-bumper {
+  margin-top:50px;
+}
+.home-hero-card {
+  &:extend(.shadow);
+  background-color:@white;
+  // height:330px;
+  padding:30 25;
+  width:100%;
+  margin-top:20px;
+}
+.home-hero-card-title {
+  font-size: 28px;
+  font-weight: 500;
+  font-family:@fontA;
+  color:@black;
+}
+.home-hero-card-points {
+  .point-style;
+  font-size: 18px;
+  font-weight: 300;
+  font-family:@fontB;
+}
+.home-hero-card-points li {
+  line-height: 2;
+}
+
+//Home - Product Features
+.home-product-title {
+  &:extend(.brush-text-background);
+  min-width:275px;
+  width:55%;
+  // text-align:center;
+}
+.home-product-feature-container-style {
+  background-size:58%;
+  background-repeat:no-repeat;
+  // margin-top:40px;
+}
+#home-product-feature-closeMore {
+  .home-product-feature-container-style;
+  background-position:bottom right;
+  background-image: url('/img/home/close-more.png');
+
+
+}
+#home-product-feature-schedule {
+  .home-product-feature-container-style;
+  background-position:bottom left;
+  background-image: url('/img/home/schedule.png');
+
+}
+#home-product-feature-repeat {
+  .home-product-feature-container-style;
+  background-position:bottom right;
+  background-image: url('/img/home/repeat.png');
+  background-size:53%;
+}
+.home-product-feature-title {
+  font-family:@fontA;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.home-product-feature-description {
+  font-family:@fontB;
+  font-size: 15px;
+  margin: 20px 0;
+}
+.home-product-feature-card {
+  &:extend(.shadow);
+  padding: 40px 30px;
+  margin: 20px 0;
+  background-color: @white;
+}
+.home-product-feature-card-title {
+ .brush-text-background;
+ font-size:17px;
+ min-width:240px;
+ width:66%;
+ text-align:center;
+}
+@media (min-width:768px){
+  .home-product-feature-list-divider {
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: @greyDivider;
+  }
+}
+
+.home-product-feature-list-cell {
+  // padding:15 0;
+  margin: 10 0;
+}
+
+.home-product-feature-list-point {
+  &:extend(.home-product-feature-list-cell);
+  // height:15px;
+  font-size: 14px;
+  font-family:@fontA;
+  font-weight:600;
+
+}
+.home-product-feature-list-point-summary {
+  &:extend(.home-product-feature-list-cell);
+  // height:60px;
+  font-family:@fontB;
+  font-size: 14px;
+  font-weight: 300;
+}
+@media(min-width:768px){
+  .home-product-feature-list-cell {
+    height:45px
+  }
+}
+// Other pages
+.home-other-bg-style {
+  height:650px;
+  width:100%;
+}
+#home-other-bg {
+  &:extend(.home-other-bg-style);
+  background-image: url('/img/home/bass-fish.png');
+  background-size:cover;
+  position:relative;
+}
+
+#home-other-content {
+  &:extend(.home-other-bg-style);
+  padding: 50 0;
+  position:absolute;
+  z-index:0;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+.home-full-width-bg-mask {
+  // border:none
+  position:absolute;
+  z-index:1;
+  width:100%;
+  // background-repeat:none;
+  background-size:auto 100%;
+  height:50px;
+  display:block;
+  // background-clip:padding-box;
+}
+#home-other-bg-topMask {
+  .home-full-width-bg-mask;
+  background-image: url('/img/home/bass-fish-top-mask.png');
+  height:51px;
+  top:-2px;
+}
+#home-other-bg-bottomMask {
+  .home-full-width-bg-mask;
+  // position:absolute;
+  // height:49px;
+  bottom:-3;
+  background-image: url('/img/home/bass-fish-bottom-mask.png');
+}
+.home-other-content-card {
+  &:extend(.shadow);
+  padding: 20px 30px;
+  margin: 65px 0;
+  background-color: @white;
+  color:@black;
+}
+.home-other-content-card-description {
+  font-size: 18px;
+  font-weight: 200;
+  font-family:@fontB;
+  padding:7 0;
+}
+.home-other-content-card-link {
+  font-size: 14px;
+  font-weight: 500;
+  font-family:@fontB;
+  padding:7 0;
+}
+// .home-other-faq {
+//   &:extend(.home-other-content-card);
+// }
+
+.home-timeCard {
+  &:extend(.shadow);
+  padding: 40px 30px;
+  margin: 20px 0;
+  background-color: @white;
+
+}
+.home-timeCard-title {
+  font-family: @fontA;
+  font-size: 30px;
+  font-weight:600;
+}
+.home-timeCard-title-2 {
+  &:extend(.home-timeCard-title);
+  font-weight:400;
+  font-style:italic;
+}
+.home-timeCard-desc {
+  padding-top:15px;
+  font-family: @fontB;
+  font-size: 16px;
+}
+.home-timeCard-points {
+  padding-top:20px;
+
+  font-size:20px;
+}
+.home-timeCard-points >ul >li {
+  &:extend(.point-style);
+}
+@media(min-width:992px){
+  .home-timeCard {
+    width:80%;
+    margin-right:auto;
+    margin-left:auto;
+  }
+
+  .home-timeCard-title {
+    font-size: 38px;
+  }
+  .home-timeCard-title-2 {
+
+  }
+  .home-timeCard-desc {
+
+    width:60%;
+  }
+  .home-timeCard-points {
+    padding-left:20px;
+    padding-right:20px;
+  }
+}
